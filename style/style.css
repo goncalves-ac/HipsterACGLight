@@ -1,0 +1,291 @@
+/* Aula inicial :D */
+/* O * é o reset do CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*começa a contar o tamanho a partir da borda interna*/
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url("../imagem/background.png");
+    background-color: #fff;
+    background-size: auto 100vh;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-y: 0;
+    font-family: monospace;
+    font-size: 20px;
+/* background-size: altura largura - ex: auto 100vh */
+}
+
+body::-webkit-scrollbar { /* estabelece a espessura da barra de rolagem */
+    width: 15px;
+} 
+  
+body::-webkit-scrollbar-thumb {    /* Muda a cor da barra de rolagem */
+    background-image: linear-gradient( -0.2turn, #662e9b, #ea3546, #f86624, #f9c80e);   
+}
+
+.corpo-texto {
+    margin-left: 9em;
+}
+
+/* Se a tela tiver pelo menos 400 px vai carregar os estilo */
+/* BreakPoint */  
+@media (min-width: 400px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bolder;
+    display: block;
+    padding: 10px;
+    margin: 10px;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+    color: #f86624;
+    background-color: #000;
+    border-radius: 10px;
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    filter: blur(1px);
+}
+
+.menu ul {
+    background-image: linear-gradient( -0.2turn, #662e9b, #ea3546, #f86624, #f9c80e);
+    border-radius: 0px 10px 10px 0px;
+    position: fixed;
+    left: 0;
+    top: 40%;
+    width: 8em;
+    padding: 2px;
+}
+
+.menu li {
+    text-align: center;
+    align-items: center;
+}
+
+.site-title {
+    color: #f9c80e;
+    text-align: center;
+}
+
+.site-subtitle {
+    color: #ea3546;
+    text-align: center;
+    font-style: italic;
+}
+
+.site-subtitle span {
+    color: #f9c80e;
+}
+
+section h2 {
+    color: #f9c80e;
+    text-align: center;
+    padding: 10px;
+}
+
+section span {
+    color: #ea3546;
+}
+
+hr {
+    color: #fff;
+    background-image: linear-gradient( -0.2turn, #662e9b, #ea3546, #f86624, #f9c80e);
+    height: 2.5px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.sobre {
+    margin-left: 9em;
+    padding: 1em;
+    min-height: 100vh;
+}
+
+.sobre .avatar {
+    float: right;
+    margin-left: 2em;
+    margin-top: 2em;
+}
+
+.sobre .avatar img {
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    width: 65vh;
+}
+
+.sobre p {
+    color: #000;
+    text-indent: 1.5em;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+    text-align: justify;
+}
+
+.sobre a {
+    color: #662e9b;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.sobre a:hover {
+    color: #ea3546;
+    font-weight: bolder;
+}
+
+.corpo-texto {
+    margin-left: 9em;
+    min-height: 100vh;
+}
+
+.portifolio .grid {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.portifolio img {
+    height: 280px;
+    width: 280px;
+    border: 2px solid #ea3546;
+    border-radius: 15%;
+    transition: transform 500ms;
+}
+
+.portifolio img:hover{
+    transform: scale(1.3);
+}
+
+.portifolio figcaption{
+    font-family: monospace;
+    font-style: italic;
+    color: #662e9b;
+    text-align: center;
+    margin-top: 1em;
+    font-size: 1em;
+
+}
+
+.portifolio figcaption a{
+    text-decoration: none;
+    color: #662e9b;
+}
+
+.portifolio .titulo {
+    padding-top: 1.5em;
+}
+
+.contato {
+    background-color: #fff;
+    margin-left: 9em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+
+.contato-grid {
+    width: 1000px;
+    height: 500px;
+    background-image: linear-gradient(-0.2turn, #662e9b, #ea3546, #f86624, #f9c80e);
+    border-radius: 10%;
+    margin: 10%;
+    padding: 5%;
+}
+
+.contato-grid h2 {
+    text-align: center;
+    color: #f9c80e;
+    font-size: 40px;
+}
+
+.contato-grid .grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    text-align: center;
+    margin-top: 5%;
+}
+
+.contato-grid .grid a {
+    color: #fff;
+    font-size: 4em;
+    padding: 5%;
+    text-decoration: none;
+    transition: text-shadow 1s;
+}
+
+.contato-grid .grid a:active,
+.contato-grid .grid a:hover {
+    text-decoration: none;
+    text-shadow: 5px 5px 10px #000;
+}
+
+/*
+.rodape ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.rodape li {
+    list-style: none;
+    font-size: 15px;
+}
+
+
+.rodape {
+    background-image: linear-gradient( -0.2turn, #662e9b, #ea3546, #f86624, #f9c80e);
+    border-radius: 10px 10px 0px 0px;
+    padding: 2px;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+.rodape img {
+    width: 20%;
+}
+
+.rodape a {
+    display: block;
+    padding: 10px;
+    margin: 10px;
+}
+
+.rodape a:hover {
+    width: 40%;
+    padding: 5px;
+    margin: 5px;
+    filter: blur(1px);
+}
+*/
+
+
+/* 
+CORES --> AMARELO : #f9c80e;
+          LARANJA : #f86624;
+          ROSA : #ea3546;
+          ROXO : #662e9b;
+          AZUL : #43bccd;
+*/
